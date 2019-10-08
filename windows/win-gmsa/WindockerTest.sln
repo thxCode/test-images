@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29021.104
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindockerTest", "WindockerTest.csproj", "{4E2D16A3-7BD6-401D-9745-3CA7553618DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E2D16A3-7BD6-401D-9745-3CA7553618DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2D16A3-7BD6-401D-9745-3CA7553618DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2D16A3-7BD6-401D-9745-3CA7553618DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2D16A3-7BD6-401D-9745-3CA7553618DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CB9FBBA-2BA8-4677-ABB3-A5D12C45C14F}
+	EndGlobalSection
+EndGlobal
