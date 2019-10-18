@@ -1,6 +1,11 @@
 # IIS
 
-- Get hostname when accessing `/name.html`
+An IIS Windows image:
+
+- Listen on `80`
+- Get `hostname` when accessing `/name.html`
+- Base on Windows core server
+
 
 ## Building
 
@@ -12,6 +17,4 @@
 
 ## Images
 
-- `maiwj/win-iis:[version]-windows-[release_id]`
-- `maiwj/win-iis:[version]-windows`: the manifest image
-- `maiwj/win-iis:windows`: the latest image
+https://cloud.docker.com/repository/docker/maiwj/win-iis

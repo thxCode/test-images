@@ -1,11 +1,12 @@
 # Knife
 
-- Tool box for Windows
-	+ tcpdump
-	+ iperf/iperf3
-	+ ssh
-	+ diskspd
-	+ dig/nslookup/...
+A Windows image for grouping some tools:
+
+- tcpdump
+- iperf/iperf3
+- ssh
+- diskspd
+- dig/nslookup/...
 
 ## Building
 
@@ -17,6 +18,4 @@
 
 ## Images
 
-- `maiwj/win-knife:[version]-windows-[release_id]`
-- `maiwj/win-knife:[version]-windows`: the manifest image
-- `maiwj/win-knife:windows`: the latest image
+https://cloud.docker.com/repository/docker/maiwj/win-knife

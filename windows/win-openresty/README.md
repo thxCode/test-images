@@ -1,6 +1,10 @@
 # OpenResty
 
+A Windows image for OpenResty:
+
+- Listen on `80`
 - Instead of Nginx
+- Base on Windows nano server
 
 ## Building
 
@@ -12,6 +16,4 @@
 
 ## Images
 
-- `maiwj/win-openresty:[version]-windows-[release_id]`
-- `maiwj/win-openresty:[version]-windows`: the manifest image
-- `maiwj/win-openresty:windows`: the latest image
+https://cloud.docker.com/repository/docker/maiwj/win-openresty

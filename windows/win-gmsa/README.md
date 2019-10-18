@@ -1,6 +1,11 @@
 # gMSA
 
-- Verify your gMSA account when accessing the root
+A Windows image for [gMSA testing](https://kubernetes.io/docs/tasks/configure-pod-container/configure-gmsa/):
+
+- Listen on `80`
+- Verify the gMSA account when accessing the root path
+- Base on Windows core server
+
 
 ## Building
 
@@ -19,8 +24,4 @@ $DONET="4.7.2"; ./scripts/ci.ps1
 
 ## Images
 
-Introducing two image tags:
-
-- `maiwj/win-gmsa:[version]-windows-[release_id]`
-- `maiwj/win-gmsa:[version]-windows`: the manifest image
-- `maiwj/win-gmsa:windows`: the latest image
+https://cloud.docker.com/repository/docker/maiwj/win-gmsa

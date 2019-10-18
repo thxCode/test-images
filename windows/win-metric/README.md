@@ -1,7 +1,11 @@
 # Metric
 
-- Count the number of people accessing
+A Windows image for Prometheus metrics testing:
+
+- Listen on `80`
+- Count the number of accessing
 - Output metric on `/metrics`
+- Base on Windows nano server
 
 ## Building
 
@@ -13,8 +17,4 @@
 
 ## Images
 
-Introducing two image tags:
-
-- `maiwj/win-metric:[version]-windows-[release_id]`
-- `maiwj/win-metric:[version]-windows`: the manifest image
-- `maiwj/win-metric:windows`: the latest image
+https://cloud.docker.com/repository/docker/maiwj/win-metric
