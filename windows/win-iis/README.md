@@ -7,7 +7,7 @@ An IIS Windows image:
 - Base on Windows core server
 
 
-## Building
+## Build
 
 ``` powershell
 

@@ -6,7 +6,7 @@ A Windows image for OpenResty:
 - Instead of Nginx
 - Base on Windows nano server
 
-## Building
+## Build
 
 ``` powershell
 

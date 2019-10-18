@@ -7,7 +7,7 @@ A Windows image for Prometheus metrics testing:
 - Output metric on `/metrics`
 - Base on Windows nano server
 
-## Building
+## Build
 
 ``` powershell
 

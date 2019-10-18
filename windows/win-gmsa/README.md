@@ -7,7 +7,7 @@ A Windows image for [gMSA testing](https://kubernetes.io/docs/tasks/configure-po
 - Base on Windows core server
 
 
-## Building
+## Build
 
 ``` powershell
 

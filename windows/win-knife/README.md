@@ -8,7 +8,7 @@ A Windows image for grouping some tools:
 - diskspd
 - dig/nslookup/...
 
-## Building
+## Build
 
 ``` powershell
 
