@@ -16,15 +16,24 @@ if (-not $RELEASE_IDS) {
     return 
 }
 
-$excludes = @('scripts')
-if ($DONT_PACKAGE_IMAGES) {
-    $excludes += @($($DONT_PACKAGE_IMAGES -split ','))
+$SRC_PATH = (Resolve-Path "$PSScriptRoot\..").Path
+
+$targets = @()
+if ($ONLY_PACKAGE_IMAGES) {
+    $includes = @()
+    $includes += @($($ONLY_PACKAGE_IMAGES -split ','))
+    $targets = Get-ChildItem -Path $SRC_PATH -Directory -Include $includes
+} else {
+    $excludes = @('scripts')
+    if ($DONT_PACKAGE_IMAGES) {
+        $excludes += @($($DONT_PACKAGE_IMAGES -split ','))
+    }
+    $targets = Get-ChildItem -Path $SRC_PATH -Directory -Exclude $excludes
 }
 
 $env:DOCKER_CLI_EXPERIMENTAL="enabled"
 
-$SRC_PATH = (Resolve-Path "$PSScriptRoot\..").Path
-Get-ChildItem -Path $SRC_PATH -Directory -Exclude $excludes | Sort-Object -Descending | ForEach-Object {
+$targets | Sort-Object -Descending | ForEach-Object {
     $dirName = $_.Name
 
     $versionNames = @()
