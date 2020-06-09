@@ -1,10 +1,24 @@
 # Test Images Group
 
-## Build
+## Package
 
 ``` powershell
 
 ./windows/scripts/ci.ps1
+
+```
+
+Pushing images to `your` repo:
+
+``` powershell
+$REPO="your"; ./windows/scripts/ci.ps1
+
+```
+
+Only packaging `testconatiner`, `testmetrics` and `testnginx`:
+
+``` powershell
+$ONLY_PACKAGE_IMAGES="testcontainer,testmetrics,testnginx"; ./windows/scripts/ci.ps1
 
 ```
 
@@ -13,12 +27,8 @@ Skip packaging `win-iis` and `win-gmsa`:
 ``` powershell
 $DONT_PACKAGE_IMAGES="win-iis,win-gmsa"; ./windows/scripts/ci.ps1
 
-```
-
-Tag images to `your` repo:
-
-``` powershell
-$REPO="your"; ./windows/scripts/ci.ps1
+# overwrite the ONLY_PACKAGE_IMAGES variable if specified previously in same PowerShell session.
+$ONLY_PACKAGE_IMAGES=""; $DONT_PACKAGE_IMAGES="win-iis,win-gmsa"; ./windows/scripts/ci.ps1
 
 ```
 
@@ -26,7 +36,31 @@ $REPO="your"; ./windows/scripts/ci.ps1
 
 ``` powershell
 
-$RELEASE_IDS="1809,1903"; ./windows/scripts/manifest.ps1
+$RELEASE_IDS="1809,1903,1909"; ./windows/scripts/manifest.ps1
+
+```
+
+Pushing manifest image to `your` repo:
+
+``` powershell
+$REPO="your"; $RELEASE_IDS="1809,1903,1909"; ./windows/scripts/manifest.ps1
+
+```
+
+Only manifesting `testconatiner`, `testmetrics` and `testnginx`:
+
+``` powershell
+$ONLY_PACKAGE_IMAGES="testcontainer,testmetrics,testnginx"; $RELEASE_IDS="1809,1903,1909"; ./windows/scripts/manifest.ps1
+
+```
+
+Skip manifesting `win-iis` and `win-gmsa`:
+
+``` powershell
+$DONT_PACKAGE_IMAGES="win-iis,win-gmsa"; $RELEASE_IDS="1809,1903,1909"; ./windows/scripts/manifest.ps1
+
+# overwrite the ONLY_PACKAGE_IMAGES variable if specified previously in same PowerShell session.
+$ONLY_PACKAGE_IMAGES=""; $DONT_PACKAGE_IMAGES="win-iis,win-gmsa"; $RELEASE_IDS="1809,1903,1909"; ./windows/scripts/manifest.ps1
 
 ```
 
