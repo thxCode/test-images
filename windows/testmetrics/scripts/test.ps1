@@ -19,7 +19,7 @@ try {
             $resp = $(curl.exe -sL http://127.0.0.1)
             Log-Debug "/ : $resp"
             if ($resp -match "^Hello\s+There!\d+") {
-                $count = $($resp -split " ")[1]
+                $count = $($resp -replace '\D+(\d+)','$1')
                 $metric = $(curl.exe -sL http://127.0.0.1/metrics)
                 Log-Debug "/metrics : $metric"
                 return ("web_app_online_user_count $count" -eq $metric)

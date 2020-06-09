@@ -22,6 +22,8 @@ function Log-Error
 {
     Write-Host -NoNewline -ForegroundColor DarkRed "ERRO: "
     Write-Host -ForegroundColor Gray ("{0,-44}" -f ($args -join " "))
+
+    exit 1
 }
 
 
