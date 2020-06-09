@@ -10,7 +10,7 @@ Push-Location $SRC_PATH
 $imageName = Construct-ImageName
 $dockerRunID = ""
 try {    
-    $dockerRunID = $(docker run -d -p 80:80 $imageName 2>&1)
+    $dockerRunID = $(docker run -d -p 80:8080 $imageName 2>&1)
     if (-not $?) {
         Log-Error "Could not start $imageName : $dockerRunID"
     } else {
