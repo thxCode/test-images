@@ -1,4 +1,4 @@
-# Nginx
+# Test Nginx
 
 A Windows image for Nginx which forks from https://github.com/rancher/rancher/blob/master/tests/validation/tests/Dockerfiles/windows/nginx:
 
