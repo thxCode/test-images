@@ -22,7 +22,7 @@ $targets = @()
 if ($ONLY_PACKAGE_IMAGES) {
     $includes = @()
     $includes += @($($ONLY_PACKAGE_IMAGES -split ','))
-    $targets = Get-ChildItem -Path $SRC_PATH -Directory -Include $includes
+    $targets = Get-ChildItem -Path $SRC_PATH -Directory -Include $includes -Recurse
 } else {
     $excludes = @('scripts')
     if ($DONT_PACKAGE_IMAGES) {
